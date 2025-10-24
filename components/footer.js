@@ -4,13 +4,12 @@ class CustomFooter extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>
         footer {
-          background: rgba(17, 24, 39, 0.8);
-          color: white;
+          background: #f8fafc;
+          color: #1e293b;
           padding: 2rem;
           text-align: center;
-          border-top: 1px solid rgba(124, 58, 237, 0.3);
-          backdrop-filter: blur(8px);
-        }
+          border-top: 1px solid rgba(59, 130, 246, 0.3);
+}
         .footer-content {
           max-width: 1200px;
           margin: 0 auto;
@@ -24,17 +23,17 @@ class CustomFooter extends HTMLElement {
           gap: 1.5rem;
         }
         .social-links a {
-          color: white;
+          color: #1e40af;
           transition: color 0.3s ease;
         }
         .social-links a:hover {
-          color: #8B5CF6;
+          color: #3b82f6;
         }
         .copyright {
           font-size: 0.875rem;
-          color: rgba(255, 255, 255, 0.7);
+          color: #64748b;
         }
-      </style>
+</style>
       <footer>
         <div class="footer-content">
           <div class="social-links">

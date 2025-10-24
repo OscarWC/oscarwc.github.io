@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 body {
     font-family: 'Inter', sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #ffffff;
+    color: #1e293b;
 }
 
 .custom-navbar a:hover {
@@ -13,6 +14,7 @@ body {
 
 section {
     scroll-margin-top: 100px;
+    padding: 2rem 0;
 }
 
 /* Smooth scrolling for anchor links */
@@ -26,14 +28,24 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-    background: #1a202c;
+    background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #7c3aed;
+    background: #3b82f6;
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #6d28d9;
+    background: #2563eb;
+}
+
+/* Project cards */
+#projects-container div {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#projects-container div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }

@@ -4,7 +4,7 @@ class CustomNavbar extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>
         nav {
-          background: rgba(17, 24, 39, 0.8);
+          background: rgba(255, 255, 255, 0.95);
           padding: 1.5rem;
           display: flex;
           justify-content: space-between;
@@ -14,18 +14,16 @@ class CustomNavbar extends HTMLElement {
           width: 100%;
           top: 0;
           z-index: 1000;
-          border-bottom: 1px solid rgba(124, 58, 237, 0.3);
+          border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
         .logo {
-          color: white;
+          color: #1e40af;
           font-weight: bold;
           font-size: 1.5rem;
-          background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
           text-decoration: none;
         }
-        ul {
+ul {
           display: flex;
           gap: 2rem;
           list-style: none;
@@ -33,7 +31,7 @@ class CustomNavbar extends HTMLElement {
           padding: 0;
         }
         a {
-          color: white;
+          color: #1e40af;
           text-decoration: none;
           transition: all 0.3s ease;
           font-weight: 500;
@@ -41,7 +39,7 @@ class CustomNavbar extends HTMLElement {
           padding: 0.5rem 0;
         }
         a:hover {
-          color: #8B5CF6;
+          color: #3b82f6;
         }
         a::after {
           content: '';
@@ -50,10 +48,10 @@ class CustomNavbar extends HTMLElement {
           left: 0;
           width: 0;
           height: 2px;
-          background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+          background: #3b82f6;
           transition: width 0.3s ease;
         }
-        a:hover::after {
+a:hover::after {
           width: 100%;
         }
         .mobile-menu-btn {
@@ -71,11 +69,12 @@ class CustomNavbar extends HTMLElement {
             top: 100%;
             left: 0;
             right: 0;
-            background: rgba(17, 24, 39, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             padding: 1rem;
-            border-bottom: 1px solid rgba(124, 58, 237, 0.3);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
           }
-          ul.show {
+ul.show {
             display: flex;
           }
           .mobile-menu-btn {
