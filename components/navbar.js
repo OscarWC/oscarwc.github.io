@@ -32,7 +32,14 @@ class CustomNavbar extends HTMLElement {
           margin: 0;
           padding: 0;
         }
-a {
+span.logo {
+          color: #1e40af;
+          font-weight: bold;
+          font-size: 1.5rem;
+          margin-right: 2rem;
+        }
+
+        a {
           color: #1e40af;
           text-decoration: none;
           transition: all 0.3s ease;
@@ -40,7 +47,7 @@ a {
           position: relative;
           padding: 0.5rem 0;
         }
-        a:hover {
+a:hover {
           color: #3b82f6;
         }
         a::after {
@@ -85,8 +92,8 @@ ul.show {
         }
       </style>
       <nav>
-        <a href="/" class="logo">Oscar Windrath-Carr</a>
-        <button class="mobile-menu-btn" id="menuBtn">
+        <span class="logo">Oscar Windrath-Carr</span>
+<button class="mobile-menu-btn" id="menuBtn">
           <i data-feather="menu"></i>
         </button>
         <ul id="navMenu">
