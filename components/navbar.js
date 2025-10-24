@@ -5,8 +5,8 @@ class CustomNavbar extends HTMLElement {
       <style>
         nav {
           background: rgba(255, 255, 255, 0.95);
-          padding: 1rem;
-display: flex;
+          padding: 1.5rem;
+          display: flex;
           justify-content: space-between;
           align-items: center;
           backdrop-filter: blur(8px);
