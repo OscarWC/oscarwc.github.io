@@ -44,34 +44,20 @@ html {
     margin-top: 2rem;
 }
 #projects-container div,
-#experience div,
-#education div {
+.experience-card,
+.education-card {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     background: white;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #bfdbfe;
     border-radius: 0.5rem;
     padding: 1.5rem;
 }
-
-#projects-container div:hover,
-#experience div:hover,
-#education div:hover {
+#projects-container div:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     border-color: #3b82f6;
 }
 
-#experience time,
-#education time {
-    color: #1d4ed8;
-    font-weight: 500;
-}
-
-#experience h4,
-#education h4 {
-    color: #1e40af;
-    font-weight: 600;
-}
 #projects h2 {
     margin-bottom: 2rem;
 }
