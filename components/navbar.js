@@ -7,8 +7,9 @@ class CustomNavbar extends HTMLElement {
           background: rgba(255, 255, 255, 0.95);
           padding: 1.5rem;
           display: flex;
-          justify-content: space-between;
+          justify-content: flex-start;
           align-items: center;
+          gap: 2rem;
           backdrop-filter: blur(8px);
           position: fixed;
           width: 100%;
@@ -22,15 +23,16 @@ class CustomNavbar extends HTMLElement {
           font-weight: bold;
           font-size: 1.5rem;
           text-decoration: none;
+          margin-right: 2rem;
         }
-ul {
+        ul {
           display: flex;
-          gap: 2rem;
+          gap: 1.5rem;
           list-style: none;
           margin: 0;
           padding: 0;
         }
-        a {
+a {
           color: #1e40af;
           text-decoration: none;
           transition: all 0.3s ease;
