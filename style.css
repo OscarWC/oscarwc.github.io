@@ -39,13 +39,41 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: #2563eb;
 }
-
 /* Project cards */
+#projects-container {
+    margin-top: 2rem;
+}
+
 #projects-container div {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
 }
 
 #projects-container div:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-color: #3b82f6;
+}
+
+#projects h2 {
+    margin-bottom: 2rem;
+}
+
+#projects-container h3 {
+    color: #1e40af;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+#projects-container p {
+    color: #4b5563;
+    margin-bottom: 1rem;
+}
+
+#projects-container a {
+    color: #3b82f6;
+    font-weight: 500;
 }
