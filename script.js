@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Get form values
             const name = contactForm.querySelector('#name').value;
             const email = contactForm.querySelector('#email').value;
-            const message = contactForm.querySelector('#message').value;
+            const message = contactForm.querySelector('#message').value; 
             
             // Here you would typically send the form data to a server
             console.log('Form submitted:', { name, email, message });
