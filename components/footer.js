@@ -16,7 +16,7 @@ class CustomFooter extends HTMLElement {
           display: flex;
           flex-direction: column;
           gap: 1.5rem;
-        }
+        } 
         .social-links {
           display: flex;
           justify-content: center;
