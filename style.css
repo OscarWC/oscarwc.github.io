@@ -10,7 +10,7 @@ body {
 
 .custom-navbar a:hover {
     transform: translateY(-2px);
-}
+} 
 
 section {
     scroll-margin-top: 100px;
