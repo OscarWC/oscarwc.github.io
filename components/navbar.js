@@ -11,7 +11,7 @@ class CustomNavbar extends HTMLElement {
           align-items: center;
           gap: 2rem;
           backdrop-filter: blur(8px);
-          position: fixed;
+          position: fixed; 
           width: 100%;
           top: 0;
           z-index: 1000;
