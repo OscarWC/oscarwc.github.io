@@ -238,35 +238,42 @@ Send Message
     <script src="script.js"></script>
     
 <script>
-        feather.replace();
-        
-        // Load GitHub projects
-        fetch('https://api.github.com/users/oscarwc/repos?sort=updated&direction=desc')
-            .then(response => response.json())
-            .then(repos => {
-                const projectsContainer = document.getElementById('projects-container');
-                repos.slice(0, 6).forEach(repo => {
-                    if (!repo.fork) {
-                        const projectCard = document.createElement('div');
-                        projectCard.className = 'bg-white p-6 rounded-lg border border-blue-200 hover:shadow-lg transition';
-                        projectCard.innerHTML = `
-                            <div class="flex items-center gap-4 mb-4">
-                                <i data-feather="github" class="text-blue-500"></i>
-                                <h3 class="text-xl font-semibold text-blue-600">${repo.name}</h3>
-                            </div>
-                            <p class="text-gray-700 mb-4">${repo.description || 'No description provided'}</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-sm text-blue-600">${repo.language || 'Various'}</span>
-                                <a href="${repo.html_url}" target="_blank" class="text-sm text-blue-600 hover:underline flex items-center gap-1">
-                                    View on GitHub <i data-feather="external-link" class="w-4 h-4"></i>
-                                </a>
-                            </div>
-                        `;
-                        projectsContainer.appendChild(projectCard);
-                    }
+    feather.replace();
+
+    const EXCLUDED_REPOS = [
+        'oscarwc.github.io'
+    ];
+
+    fetch('https://api.github.com/users/oscarwc/repos?sort=updated&direction=desc')
+        .then(response => response.json())
+        .then(repos => {
+            const projectsContainer = document.getElementById('projects-container');
+
+            repos
+                .filter(repo => !repo.fork)
+                .filter(repo => !EXCLUDED_REPOS.includes(repo.name))
+                .slice(0, 6)
+                .forEach(repo => {
+                    const projectCard = document.createElement('div');
+                    projectCard.className = 'bg-white p-6 rounded-lg border border-blue-200 hover:shadow-lg transition';
+                    projectCard.innerHTML = `
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-feather="github" class="text-blue-500"></i>
+                            <h3 class="text-xl font-semibold text-blue-600">${repo.name}</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">${repo.description || 'No description provided'}</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-blue-600">${repo.language || 'Various'}</span>
+                            <a href="${repo.html_url}" target="_blank" class="text-sm text-blue-600 hover:underline flex items-center gap-1">
+                                View on GitHub <i data-feather="external-link" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    `;
+                    projectsContainer.appendChild(projectCard);
                 });
-                feather.replace();
-            });
-    </script>
+
+            feather.replace();
+        });
+</script>
 </body>
 </html>
